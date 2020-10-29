@@ -1,0 +1,358 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: white !important;
+}
+
+
+/* app */
+
+.logo-app {
+    color: white !important;
+    font-weight: bold;
+}
+
+.contenedor-nav {
+    background-color: #ef233c !important;
+    padding: 1rem !important;
+}
+
+.navegacion-sesion {
+    background-color: #d90429 !important;
+}
+
+.hr-navegacion {
+    color: #ececec;
+    width: 100%;
+    padding: 0.01rem;
+}
+
+
+/* inicio de sesion */
+
+
+/* Index actos publicos */
+
+.texto-actos {
+    font-size: 3rem;
+    font: bold;
+    margin-top: 0rem;
+    margin-bottom: 2rem;
+    color: #ef233c;
+    font-family: 'Bebas Neue', cursive;
+}
+
+.icono-fa {
+    color: #ef233c;
+    font-size: 1.3rem;
+    margin-top: 1rem;
+}
+
+.navegacion-inicio {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #ef233c !important;
+    margin-top: 1rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+.navegacion-inicio:hover {
+    color: #d90429 !important;
+}
+
+.imagen-success {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 6rem;
+    margin-right: 6rem;
+    margin-top: 3rem;
+    background-color: white;
+    padding-top: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 0.5rem;
+}
+
+.texto-parrafo {
+    font-size: 1.5rem;
+    line-height: 3rem;
+}
+
+.texto-parrafo span {
+    font-size: 2rem;
+    color: #ef233c;
+    font-weight: bold;
+}
+
+.imagen img {
+    width: 700px;
+}
+
+.boton-index {
+    color: #ef233c;
+    border: 1px solid #ef233c;
+    border-radius: 10px;
+    padding: 0.3rem 1rem 0.3rem 1rem;
+    text-decoration: none;
+    transition: .5s ease-in;
+}
+
+.boton-index:hover {
+    -webkit-box-shadow: 2px 4px 14px 0px rgba(230, 57, 70, 1);
+    -moz-box-shadow: 2px 4px 14px 0px rgba(230, 57, 70, 1);
+    box-shadow: 2px 4px 14px 0px rgba(230, 57, 70, 1);
+    color: #ef233c;
+    text-decoration: none !important;
+}
+
+.categorias-bg {
+    background-color: white;
+}
+
+.seccion-iconos {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+.iconos {
+    text-align: center;
+    margin-left: 3rem;
+}
+
+.iconos i {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #ef233c;
+}
+
+.iconos p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.4rem;
+}
+
+.footer {
+    margin-top: auto;
+    background-color: #ef233c;
+    padding: 2rem;
+}
+
+.footer p {
+    color: white;
+}
+
+
+/* administración */
+
+.header-admin {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1.2rem;
+    padding-top: 1.2rem;
+    align-items: center;
+    -webkit-box-shadow: 2px 4px 14px 0px rgba(230, 57, 70, 1);
+    -moz-box-shadow: 2px 4px 14px 0px rgba(230, 57, 70, 1);
+    box-shadow: 2px 4px 14px 0px rgba(230, 57, 70, 1);
+}
+
+.texto-vacantefy a {
+    color: #ef233c !important;
+    text-decoration: none;
+    font-size: 1.6rem;
+    margin-right: 3rem;
+    font-family: 'Carter One', cursive;
+}
+
+.dropdown-admin {
+    color: #ef233c;
+    background-color: white;
+    border: none;
+    font-size: 1.4rem;
+    margin-left: 3rem;
+}
+
+.main-admin h1 {
+    color: #ef233c;
+    font-family: 'Roboto', sans-serif;
+}
+
+.hr-admin {
+    color: #ef233c;
+    width: 40%;
+    background-color: #ef233c;
+    padding: 0.03rem;
+}
+
+.admin-img {
+    display: flex;
+    justify-content: center;
+}
+
+.admin-img img {
+    width: 200px !important;
+    margin: 4rem;
+}
+
+.parrafo-admin {
+    color: #ef233c;
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+
+/*  VacanteAdmin  */
+
+.contenedor-formulario {
+    width: 30rem;
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+    border: 1px solid #ef233c;
+    padding: 2rem;
+    -webkit-box-shadow: 2px 4px 14px 0px rgba(230, 57, 70, 1);
+    -moz-box-shadow: 2px 4px 14px 0px rgba(230, 57, 70, 1);
+    box-shadow: 2px 4px 14px 0px rgba(230, 57, 70, 1);
+}
+
+.hr-vacantes {
+    color: #ef233c;
+    width: 20%;
+    background-color: #ef233c;
+    padding: 0.03rem;
+}
+
+.boton-formulario {
+    color: #d90429;
+    background-color: white;
+    border: 1px solid #d90429;
+    padding: 0.4rem 2.3rem 0.4rem 2.3rem;
+    border-radius: 5px;
+    transition: .3s ease-in;
+}
+
+.boton-formulario:hover {
+    color: white;
+    background-color: #d90429;
+}
+
+.th-index {
+    color: #ef233c !important;
+    font-size: 4rem;
+}
+
+.seleccion {
+    margin-top: 14rem;
+    display: flex;
+    justify-content: center;
+}
+
+.ver-vacantes a {
+    color: #ef233c;
+    font-size: 2.5rem;
+    border: 1px solid #ef233c;
+    padding: 1rem 3rem 1rem 3rem;
+    margin-bottom: 2rem;
+    transition: .4s ease-in;
+}
+
+.crear-vacante a {
+    color: #ef233c;
+    font-size: 2.5rem;
+    border: 1px solid #ef233c;
+    padding: 1rem 3rem 1rem 3rem;
+    margin-bottom: 2rem;
+    transition: .4s ease-in;
+}
+
+.ver-vacantes a:hover {
+    color: white;
+    background-color: #d90429;
+    text-decoration: none;
+}
+
+.crear-vacante a:hover {
+    color: white;
+    background-color: #d90429;
+    text-decoration: none;
+}
+
+
+/*  Perfiles  */
+
+.perfil-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.foto-perfil .logoperfil {
+    width: 56px;
+    margin-right: 1rem;
+}
+
+.header-editar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-editar a {
+    margin-right: 2rem;
+}
+
+.contenedor-formularioEdit {
+    width: 25rem !important;
+    margin-top: 1rem;
+    margin-bottom: 4rem;
+    padding: 2rem;
+}
+
+
+/* Perfiles */
+
+.contenedor-perfil {
+    border: 1px solid #ececec;
+    padding: 2rem;
+    text-align: center;
+}
+
+.texto-perfil {
+    font-size: 1.3rem;
+}
+
+.nombre-usuario {
+    color: #ef233c;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-right: 1rem;
+}
+
+.link-edit {
+    font-size: 1.5rem;
+    color: black;
+}
+
+.link-edit:hover {
+    color: #d90429;
+}
+
+.icono-volver {
+    color: #d90429;
+    font-size: 2.8rem;
+    margin-left: 1rem;
+}
+
+.biografia span {
+    color: #d90429;
+    font-size: 1.5rem;
+}
+
+
+/* Vacantes */
