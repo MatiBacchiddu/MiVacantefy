@@ -14,10 +14,12 @@
 
 @section('content')
 
+<div class="foto-perfil">
+    <img class="logoperfil" src="{{asset('img/logoperfil5.jpeg')}}" alt="imagen">
+</div>
+
 <div class="perfil-header">
-    <div class="foto-perfil">
-        <img class="logoperfil" src="{{asset('img/logoperfil5.jpeg')}}" alt="imagen">
-    </div>
+
 
     <div class="nombre-delusuario">
         <h2 class="text-center mb-2 nombre-usuario">{{$perfil->usuario->name}}<h2>

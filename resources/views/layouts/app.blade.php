@@ -38,6 +38,7 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
                         <!-- Authentication Links -->
+
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -45,18 +46,35 @@
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
-                                <a class="nav-link logo-app" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                <a class="nav-link logo-app" href="{{ route('login') }}">{{ __('Iniciar Sesion') }}</a>
                             </li>
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link logo-app" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link logo-app" href="{{ route('register') }}">{{ __('Registrarse') }}</a>
                                 </li>
                             @endif
                         @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle logo-app" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }}
+
+                            <li class="nav-item">
+                                <a id="" class="nav-link logo-app" href="{{route('perfiles.show', ['perfil' => Auth::user()->id])}}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    <i class="far fa-clipboard"></i>
                                 </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a id="" class="nav-link logo-app" href="{{route('perfiles.show', ['perfil' => Auth::user()->id])}}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    <i class="far fa-user"></i>
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link cerrar-sesion" href="{{ route('logout') }}"
+                                onclick="event.preventDefault();
+                                              document.getElementById('logout-form').submit();">
+                                <i class="fas fa-sign-out-alt"></i>
+                             </a>
+                            </li>
+
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item"

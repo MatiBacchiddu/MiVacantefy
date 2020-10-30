@@ -33,6 +33,12 @@ Route::get('/perfiles/{perfil}/edit', 'PerfilController@edit')->name('perfiles.e
 
 // vacantes inicio
 Route::get('/vacantes', 'VacantesInicioController@index')->name('vacantes.index');
+Route::get('/vacantes/{vacantes}', 'VacantesController@show')->name('vacantes.show');
+
+// postulaciones
+Route::post('/vacantes/store', 'PostuladoController@store')->name('postulado.store');
+Route::get('/postulados', 'PostuladoController@index')->name('postulado.index');
+Route::get('/misvacantes', 'PostuladoController@misvacantes')->name('vacantes.mis');
 
 
 Auth::routes();

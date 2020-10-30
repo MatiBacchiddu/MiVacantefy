@@ -3,26 +3,30 @@
 
 namespace App\Http\Controllers;
 
-use App\Postulado;
-use App\Vacantes;
-use App\VacantesInicio;
-use Illuminate\Http\Request;
 
-class VacantesInicioController extends Controller
+use App\Perfil;
+use App\Vacantes;
+use App\Postulado;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Foundation\Auth\User;
+
+class PostuladoController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-
-
-
     public function index()
     {
         //
-        $vacantes = Vacantes::all();
-        return view('vacantes.index')->with('vacantes', $vacantes);
+
+        $perfil = Perfil::all();
+        $postulados = Postulado::all();
+
+        return view ('Postulados.index')->with('postulados', $postulados)
+                                        ->with('perfil', $perfil);
     }
 
     /**
@@ -44,15 +48,34 @@ class VacantesInicioController extends Controller
     public function store(Request $request)
     {
         //
+
+        $data = $request->validate([
+            'user_id' => 'required',
+            'vacante_id' => 'required'
+        ]);
+
+        DB::table('postulados')->insert([
+            'user_id' => $data['user_id'],
+            'vacante_id' => $data['vacante_id']
+        ]);
+
+        return redirect()->action('InicioController@index');
+    }
+
+    public function misvacantes(Postulado $postulado)
+    {
+
+
+
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\VacantesInicio  $vacantesInicio
+     * @param  \App\Postulado  $postulado
      * @return \Illuminate\Http\Response
      */
-    public function show(VacantesInicio $vacantesInicio)
+    public function show(Postulado $postulado)
     {
         //
     }
@@ -60,10 +83,10 @@ class VacantesInicioController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\VacantesInicio  $vacantesInicio
+     * @param  \App\Postulado  $postulado
      * @return \Illuminate\Http\Response
      */
-    public function edit(VacantesInicio $vacantesInicio)
+    public function edit(Postulado $postulado)
     {
         //
     }
@@ -72,10 +95,10 @@ class VacantesInicioController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\VacantesInicio  $vacantesInicio
+     * @param  \App\Postulado  $postulado
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, VacantesInicio $vacantesInicio)
+    public function update(Request $request, Postulado $postulado)
     {
         //
     }
@@ -83,10 +106,10 @@ class VacantesInicioController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\VacantesInicio  $vacantesInicio
+     * @param  \App\Postulado  $postulado
      * @return \Illuminate\Http\Response
      */
-    public function destroy(VacantesInicio $vacantesInicio)
+    public function destroy(Postulado $postulado)
     {
         //
     }

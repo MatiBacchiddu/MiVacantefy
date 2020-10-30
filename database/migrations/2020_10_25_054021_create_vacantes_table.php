@@ -22,7 +22,10 @@ class CreateVacantesTable extends Migration
         Schema::create('vacantes', function (Blueprint $table) {
             $table->id();
             $table->string('titulo');
-            $table->string('descripcion');
+            $table->text('descripcion');
+            $table->string('caracter');
+            $table->string('direccion');
+            $table->string('colegio');
             $table->string('horario');
             $table->string('requisitos');
             $table->foreignId('materia_id')->constrained()->onDelete('cascade');

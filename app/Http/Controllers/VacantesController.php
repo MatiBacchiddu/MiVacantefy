@@ -6,6 +6,7 @@ use App\Materias;
 use App\Vacantes;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Foundation\Auth\User;
 
 class VacantesController extends Controller
 {
@@ -14,6 +15,11 @@ class VacantesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function __construct()
+    {
+        $this->middleware('auth'); // proteger autenticacion
+    }
+
 
     public function seleccion()
     {
@@ -55,6 +61,9 @@ class VacantesController extends Controller
         //
         $data = $request->validate([
             'titulo' => 'required',
+            'caracter' => 'required',
+            'direccion' => 'required',
+            'colegio' => 'required',
             'descripcion' => 'required',
             'horario' => 'required',
             'requisitos' => 'required',
@@ -63,6 +72,9 @@ class VacantesController extends Controller
 
         DB::table('vacantes')->insert([
             'titulo' => $data['titulo'],
+            'caracter' => $data['caracter'],
+            'direccion' => $data['direccion'],
+            'colegio' => $data['colegio'],
             'descripcion' => $data['descripcion'],
             'horario' => $data['horario'],
             'requisitos' => $data['requisitos'],
@@ -81,6 +93,8 @@ class VacantesController extends Controller
     public function show(Vacantes $vacantes)
     {
         //
+        $usuario = User::all();
+        return view('vacantes.show')->with('vacantes', $vacantes)->with('usuario', $usuario);
     }
 
     /**

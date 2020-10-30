@@ -12,6 +12,8 @@
             <thead class="bg-bordo">
                 <tr>
                     <th scole="col-3 th-index">Titulo</th>
+                    <th scole="col-3 th-index">Caracter</th>
+                    <th scole="col-3 th-index">Institución</th>
                     <th scole="col-3 th-index">Descripcion</th>
                     <th scole="col-3 th-index">Horarios</th>
                     <th scole="col-3 th-index">Materia</th>
@@ -27,6 +29,8 @@
 
                 <tr>
                     <td>{{$vacante->titulo}}</td>
+                    <td>{{$vacante->caracter}}</td>
+                    <td>{{$vacante->colegio}}</td>
                     <td>{{$vacante->descripcion}}</td>
                     <td>{{$vacante->horario}}</td>
                     <td>{{$vacante->materia->nombre}}</td>

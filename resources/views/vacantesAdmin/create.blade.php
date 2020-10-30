@@ -15,6 +15,24 @@
                 <input type="text" name="titulo" class="form-control">
             </div>
 
+
+            <div class="form-group">
+                <label for="caracter">Caracter</label>
+                <input type="text" name="caracter" class="form-control">
+            </div>
+
+
+            <div class="form-group">
+                <label for="direccion">Dirección del Establecimientos</label>
+                <input type="text" name="direccion" class="form-control">
+            </div>
+
+
+            <div class="form-group">
+                <label for="colegio">Nombre del Colegio</label>
+                <input type="text" name="colegio" class="form-control">
+            </div>
+
             <div class="form-group">
                 <label for="descripcion">Descripcion del Puesto</label>
                 <input type="text" name="descripcion" class="form-control">

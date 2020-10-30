@@ -32,6 +32,11 @@
         </div>
 
         <div class="form-group">
+            <label for="email">Correo Electronico</label>
+            <input type="text" name="email" value="{{Auth::user()->email}}" class="form-control" placeholder="tu correo">
+        </div>
+
+        <div class="form-group">
             <label for="biografia">Biografia</label>
             <textarea class="form-control" name="biografia" id="biogradia" rows="3" value="{{$perfil->biografia}}">{{$perfil->biografia}}</textarea>
           </div>
@@ -40,7 +45,8 @@
         <div class="form-group">
             <label for="estudios">Tus estudios</label>
             <textarea class="form-control" value="{{$perfil->estudios}}" name="estudios" id="biogradia" rows="3">{{$perfil->estudios}}</textarea>
-          </div>
+        </div>
+
         <button type="submit" class="boton-formulario">Actualizar</button>
 
     </form>

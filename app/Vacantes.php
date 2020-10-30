@@ -12,4 +12,9 @@ class Vacantes extends Model
        return $this->belongsTo(Materias::class);
     }
 
+    public function postulados()
+    {
+        return $this->hasMany(Postulado::class);
+    }
+
 }

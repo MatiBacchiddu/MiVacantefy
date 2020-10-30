@@ -12,6 +12,11 @@ body {
     background-color: white !important;
 }
 
+.mensaje-if {
+    font-size: 1rem;
+    text-align: center;
+}
+
 
 /* app */
 
@@ -23,6 +28,21 @@ body {
 .contenedor-nav {
     background-color: #ef233c !important;
     padding: 1rem !important;
+}
+
+li i {
+    font-size: 1.05rem;
+    margin-left: 1rem;
+    transition: .3s ease;
+}
+
+li i:hover {
+    color: black;
+}
+
+.cerrar-sesion {
+    font-size: 1rem;
+    color: white !important;
 }
 
 .navegacion-sesion {
@@ -293,8 +313,12 @@ body {
 }
 
 .foto-perfil .logoperfil {
-    width: 56px;
-    margin-right: 1rem;
+    width: 66px;
+    border-radius: 0.3rem;
+    margin-left: 41rem;
+    margin-bottom: 1rem;
+    align-items: center;
+    text-align: center;
 }
 
 .header-editar {
@@ -328,10 +352,12 @@ body {
 }
 
 .nombre-usuario {
+    text-align: center;
     color: #ef233c;
     font-size: 2rem;
     font-weight: bold;
     margin-right: 1rem;
+    margin-left: 1.5rem;
 }
 
 .link-edit {
@@ -356,3 +382,50 @@ body {
 
 
 /* Vacantes */
+
+.titulo-vacante {
+    color: #d90429;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.contenedor-vacanteshow {
+    display: flex;
+    justify-content: center;
+}
+
+.titulo-desc {
+    margin-right: 3rem;
+    font-size: 1.2rem;
+}
+
+.titulo-desc span {
+    color: #d90429;
+    font-weight: bold;
+}
+
+.horario-req {
+    font-size: 1.2rem;
+}
+
+.horario-req span {
+    color: #d90429;
+    font-weight: bold;
+}
+
+.principal-post {
+    text-align: left;
+}
+
+.boton-postulacion {
+    color: #d90429;
+    background-color: white;
+    border: 1px solid #d90429;
+    border-radius: 10px;
+    padding: 0.3rem 1rem 0.3rem 1rem;
+}
+
+.boton-postulacion:hover {
+    background-color: #d90429;
+    color: white;
+}

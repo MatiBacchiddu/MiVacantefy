@@ -32,20 +32,29 @@
                 <div class="card card-mati">
                     <div class="card-body">
                       <h5 class="card-title text-uppercase font-weight-bold">{{$vacante->titulo}}</h5>
-                      <p>Descripción: {{$vacante->descripcion}}</p>
+                      <p>Caracter: {{$vacante->caracter}}</p>
+                      <p>Institución: {{$vacante->colegio}}</p>
+                      <p>Descripción: {{Str::words(strip_tags($vacante->descripcion), 6)}}</p>
                       <p>Horario: {{$vacante->horario}}</p>
-                      <a href="#" class="btn btn-outline-danger">Ver mas</a>
+                      <a href="{{route('vacantes.show', ['vacantes' => $vacante->id])}}" class="btn btn-outline-danger">Ver mas</a>
                     </div>
                   </div>
             </div>
             @endforeach
-
+        </div>
         @else
-            <p class="mensaje-if mt-5">No hay vacantes aun</p>
+        <p class="mensaje-if mt-5">No hay vacantes aun</p>
 
         @endif
 
-        </div>
+
+
+
+    <div class="footer">
+        <footer>
+            <p class="text-center font-weight-bold mt-3">Footer de Mivacantefy 2020</p>
+        </footer>
+    </div>
 
  @endsection
 </div>
