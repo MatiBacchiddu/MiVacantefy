@@ -13,8 +13,22 @@
 
 @section('content')
 
-    <h2 class="text-center titulo-vacante">Mis vacantes</h2>
-    {{$vacantes}}
+<h1 class="text-center mt-4">Mis postulaciones</h1>
+
+<div class="container">
+   <div class="contenedor-postulaciones">
+    @foreach($postulaciones as $postulacion)
+    <div class="postulacion d-flex justify-content-center">
+    <p>Vacante para: <span>{{$postulacion->vacante->titulo}}</span></p>
+    <a href="{{route('vacantes.show', ['vacantes' => $postulacion->vacante->id])}}">Ver Vacante</a>
+    </div>
+    @endforeach
+   </div>
+</div>
 
 
+
+
+{{$postulaciones->links()}}
 @endsection
+

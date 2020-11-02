@@ -97,6 +97,11 @@ class VacantesController extends Controller
         return view('vacantes.show')->with('vacantes', $vacantes)->with('usuario', $usuario);
     }
 
+    public function materia(Vacantes $vacantes)
+    {
+        return view('materias.show');
+    }
+
     /**
      * Show the form for editing the specified resource.
      *

@@ -38,7 +38,11 @@ Route::get('/vacantes/{vacantes}', 'VacantesController@show')->name('vacantes.sh
 // postulaciones
 Route::post('/vacantes/store', 'PostuladoController@store')->name('postulado.store');
 Route::get('/postulados', 'PostuladoController@index')->name('postulado.index');
-Route::get('/misvacantes', 'PostuladoController@misvacantes')->name('vacantes.mis');
+Route::get('/postulaciones/{user}', 'PostuladoController@show')->name('postulado.show');
+
+// materias
+Route::get('/materias/{materia}', 'MateriasController@show')->name('materias.show');
+
 
 
 Auth::routes();

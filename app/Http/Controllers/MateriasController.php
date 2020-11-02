@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Materias;
+use App\Vacantes;
 use Illuminate\Http\Request;
 
 class MateriasController extends Controller
@@ -47,6 +48,9 @@ class MateriasController extends Controller
     public function show(Materias $materias)
     {
         //
+        $vacantes = Vacantes::where('materia_id', $materias->id);
+
+        return view('materias.show', compact('materias', 'vacantes'));
     }
 
     /**

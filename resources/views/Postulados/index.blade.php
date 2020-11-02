@@ -21,7 +21,6 @@
         @if(count($postulados)>0)
 
             @foreach($postulados as $postulado)
-
                 <tr>
                     <td>{{$postulado->vacante->titulo}}</td>
                     <td>{{$postulado->user->name}}</td>

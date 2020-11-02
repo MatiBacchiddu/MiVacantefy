@@ -56,7 +56,7 @@
                         @else
 
                             <li class="nav-item">
-                                <a id="" class="nav-link logo-app" href="{{route('perfiles.show', ['perfil' => Auth::user()->id])}}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                <a id="" class="nav-link logo-app" href="{{route('postulado.show', ['user' => Auth::user()->id])}}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     <i class="far fa-clipboard"></i>
                                 </a>
                             </li>

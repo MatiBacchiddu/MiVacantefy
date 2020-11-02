@@ -14,6 +14,7 @@
 
 @section('content')
 
+
 <div class="foto-perfil">
     <img class="logoperfil" src="{{asset('img/logoperfil5.jpeg')}}" alt="imagen">
 </div>

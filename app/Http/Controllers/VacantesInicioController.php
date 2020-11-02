@@ -3,8 +3,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Postulado;
+use App\Materias;
 use App\Vacantes;
+use App\Postulado;
 use App\VacantesInicio;
 use Illuminate\Http\Request;
 
@@ -21,8 +22,12 @@ class VacantesInicioController extends Controller
     public function index()
     {
         //
+        $postulados = Postulado::class;
         $vacantes = Vacantes::all();
-        return view('vacantes.index')->with('vacantes', $vacantes);
+        $materias = Materias::all();
+        return view('vacantes.index')->with('vacantes', $vacantes)
+                                     ->with('postulados', $postulados)
+                                     ->with('materias', $materias);
     }
 
     /**
@@ -55,6 +60,7 @@ class VacantesInicioController extends Controller
     public function show(VacantesInicio $vacantesInicio)
     {
         //
+
     }
 
     /**

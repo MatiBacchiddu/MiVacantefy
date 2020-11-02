@@ -10,6 +10,7 @@ use App\Postulado;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Foundation\Auth\User;
+use Illuminate\Support\Facades\Auth;
 
 class PostuladoController extends Controller
 {
@@ -62,12 +63,7 @@ class PostuladoController extends Controller
         return redirect()->action('InicioController@index');
     }
 
-    public function misvacantes(Postulado $postulado)
-    {
 
-
-
-    }
 
     /**
      * Display the specified resource.
@@ -78,6 +74,8 @@ class PostuladoController extends Controller
     public function show(Postulado $postulado)
     {
         //
+        $postulaciones = Postulado::where('user_id', Auth::user()->id)->paginate(10);
+        return view('Postulados.show', compact('postulaciones'));
     }
 
     /**

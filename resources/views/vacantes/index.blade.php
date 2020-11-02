@@ -19,12 +19,20 @@
 <div class="contenedor-vacantes">
 
 
+
 @endsection
 
 
 
 
     <h2 class="text-center texto-actos">Todas Las Vacantes</h2>
+
+    {{---<div class="nav-vacantes">
+        @foreach($materias as $materia)
+        <a href="{{route('materias.show', ['materia' => $materia->id])}}">{{$materia->nombre}}</a>
+        @endforeach
+    </div>--}}
+
     <div class="row">
         @if(count($vacantes) > 0 )
             @foreach($vacantes as $vacante)

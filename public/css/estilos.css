@@ -428,4 +428,38 @@ li i:hover {
 .boton-postulacion:hover {
     background-color: #d90429;
     color: white;
+    transition: 1s ease;
+}
+
+
+/* Postulaciones */
+
+.contenedor-postulaciones {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.postulacion p span {
+    margin-left: 1rem;
+    color: #ef233c;
+    font-weight: bold;
+}
+
+.postulacion a {
+    color: #d90429;
+    margin-left: 1rem;
+}
+
+.postulacion a:hover {
+    color: black;
+    text-decoration: none;
+}
+
+.postulacion {
+    transition: 1s ease;
+}
+
+.postulacion:hover {
+    font-size: 1.2rem;
+    cursor: pointer;
 }
